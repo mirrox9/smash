@@ -1,0 +1,231 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #393939; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+/* Добавляем стили для выпадающего списка */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Стили для основной кнопки */
+.dropbtn {
+  color: #2786eb;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Стили для содержимого выпадающего списка */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #393939;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Стили для ссылок в выпадающем списке */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Стили для наведения мыши на ссылку в выпадающем списке */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Отображаем выпадающий список, когда курсор находится над основной кнопкой */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.menu a {
+  color: #2786eb;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.buttons ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons li {
+  margin-right: 20px;
+}
+
+.buttons a {
+  background-color: #2786eb;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.buttons a:hover {
+  background-color: #c1c1c1;
+}
+
+/* Оформление навигационного меню */
+
+/* Стили для ссылок в навигационном меню */
+nav a {
+  color: #fff; /* Светлый текст */
+  text-decoration: none; /* Убираем подчеркивание */
+  padding: 10px; /* Отступы для кнопок */
+}
+
+
+
+/* Стили для активной ссылки */
+nav a.active {
+  background-color: #444; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+}
+
+nav a.logo {
+  display: inline-block;
+  position: relative;
+  font-size: 24px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  background-color: none;
+  color: none;
+}
+
+nav a.logo:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  background-color: none;
+  color: none;
+}
+
+/* Стили для наведения мыши на ссылку */
+
+nav .menu a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+
+/* Стили для кнопок регистрации и авторизации */
+nav .login,
+nav .register {
+  background-color: #fff; /* Белый фон */
+  color: #222; /* Тёмный текст */
+  border: 1px solid rgb(34, 34, 34); /* Чёрная граница */
+  border-radius: 2px; /* Закругленные углы */
+  padding: 3px 6px; /* Отступы для кнопок */
+  margin-left: 10px; /* Отступ между кнопками */
+}
+
+/* Стили для наведения мыши на кнопку */
+nav .login:hover,
+nav .register:hover {
+  background-color: #222; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+}
+
+.form {
+  z-index: 9999;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form input {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: #2786eb;
+  color: #fff;
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.close-btn::before {
+  content: "\2715"; /* код символа крестика */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* прозрачный черный цвет */
+  z-index: 9998; /* установка позиции элемента над остальными */
+  display: none; /* скрытие элемента по умолчанию */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.overlay + body > *:not(.loginForm) {
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+body {
+  overflow-y: scroll;
+}

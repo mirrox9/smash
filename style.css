@@ -1,0 +1,131 @@
+body {
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 30px 20px 20px;
+}
+
+.container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.container p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.container ul {
+  list-style: disc;
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+
+.container li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+/*Рейтинг*/
+.left-column {
+  margin-left: 5px;
+  margin-top: 30px;
+  width: 21%;
+  float: left;
+}
+
+.ratings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ratings-list li {
+  margin-bottom: 20px;
+}
+
+.rating-bar {
+  background-color: #eee;
+  height: 20px;
+  position: relative;
+  width: 80%;
+}
+
+.rating-fill {
+  background-color: #ff5722;
+  height: 100%;
+}
+
+.rating-percent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+/* news */
+.it-news {
+  margin-top: 25px;
+  margin-right: 5px;
+  float: right;
+  max-width: 340px;
+}
+
+.it-news h2 {
+  margin-bottom: 10px;
+}
+
+.it-news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.it-news li {
+  margin-bottom: 20px;
+}
+
+.it-news li img {
+  display: block;
+  margin-bottom: 5px;
+  max-width: 200px;
+}
